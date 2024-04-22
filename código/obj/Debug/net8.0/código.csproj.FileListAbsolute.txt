@@ -1,0 +1,15 @@
+C:\Users\User\Documents\VSCODE\POO-Casamentos-E-Cia\código\bin\Debug\net8.0\código.exe
+C:\Users\User\Documents\VSCODE\POO-Casamentos-E-Cia\código\bin\Debug\net8.0\código.deps.json
+C:\Users\User\Documents\VSCODE\POO-Casamentos-E-Cia\código\bin\Debug\net8.0\código.runtimeconfig.json
+C:\Users\User\Documents\VSCODE\POO-Casamentos-E-Cia\código\bin\Debug\net8.0\código.dll
+C:\Users\User\Documents\VSCODE\POO-Casamentos-E-Cia\código\bin\Debug\net8.0\código.pdb
+C:\Users\User\Documents\VSCODE\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\código.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\VSCODE\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\código.AssemblyInfoInputs.cache
+C:\Users\User\Documents\VSCODE\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\código.AssemblyInfo.cs
+C:\Users\User\Documents\VSCODE\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\código.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\VSCODE\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\código.sourcelink.json
+C:\Users\User\Documents\VSCODE\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\código.dll
+C:\Users\User\Documents\VSCODE\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\refint\código.dll
+C:\Users\User\Documents\VSCODE\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\código.pdb
+C:\Users\User\Documents\VSCODE\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\código.genruntimeconfig.cache
+C:\Users\User\Documents\VSCODE\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\ref\código.dll

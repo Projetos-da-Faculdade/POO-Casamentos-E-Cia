@@ -7,8 +7,8 @@ internal class Program
     {
         Empresa CasamentoECia = new Empresa();
         
-        DateTime data = DateTime.Now;
-        CasamentoECia.cerimonia.Add( new Cerimonia(100,data,TipoEspaco.ESPACO_A)); 
+        DateTime data = new DateTime(2024,05,25);
+        CasamentoECia.AdicionarCerimonias(100,data); 
         CasamentoECia.ListarCerimonias();
     }
 }

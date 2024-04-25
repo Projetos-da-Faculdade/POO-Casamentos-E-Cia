@@ -11,6 +11,10 @@ namespace POOCasamentosECia
         private int quantidadeConvidados;
         private TipoEspaco espaco;
 
+        //propriedades
+        public TipoEspaco Espaco { get => espaco; }
+        public DateTime Data { get => data; }
+
         //Construtor
         public Cerimonia(int quantidadeConvidados, DateTime data, TipoEspaco espaco)
         {
@@ -21,23 +25,6 @@ namespace POOCasamentosECia
         }
 
         //Métodos
-        public bool VerificaSextaSabado(DateTime data)
-        {
-            DayOfWeek dia = data.DayOfWeek;
-            return dia == DayOfWeek.Friday || dia == DayOfWeek.Saturday;
-        }
-
-        public bool PrazoMinimo30Dias(DateTime data)
-        {
-            double diasNoFuturo = (data - DateTime.Today).TotalDays;
-            return diasNoFuturo >= 30 && VerificaSextaSabado(data);
-        }
-
-        public void MelhorEspaco(int quantidadeConvidados)
-        {
-            throw new NotImplementedException();
-        }
-
         public override string ToString()
         {
             return $"Código: {codigo}\n" +

@@ -24,30 +24,32 @@ namespace POOCasamentosECia
             }
             else
             {
-                Console.WriteLine("Não possuí cerimonias cadastradas.");
+                Console.WriteLine("Não possuí cerimônias cadastradas.");
             }
         }
 
         public void AdicionarCerimonias(int quantidadeConvidados, DateTime data)
         {
-            if (VerificaSextaOuSabado(data) && PrazoMinimo30Dias(data))
+            if (quantidadeConvidados > 0 && quantidadeConvidados <= 500)
             {
-                TipoEspaco espaco = MelhorEspaco(quantidadeConvidados, data);
-                if (espaco != TipoEspaco.NULO)
+                if (PrazoMinimo30Dias(data))
                 {
-                    Cerimonia novaCerimonia = new Cerimonia(quantidadeConvidados, data, espaco);
-                    cerimonias.Add(novaCerimonia);
-                    Console.WriteLine("Cerimônia adicionada com sucesso!");
+                    if (VerificaSextaOuSabado(data))
+                    {
+                        TipoEspaco espaco = MelhorEspaco(quantidadeConvidados, data);
+                        if (espaco != TipoEspaco.NULO)
+                        {
+                            Cerimonia novaCerimonia = new Cerimonia(quantidadeConvidados, data, espaco);
+                            cerimonias.Add(novaCerimonia);
+                            Console.WriteLine("Cerimônia adicionada com sucesso!");
+                        }
+                        else { Console.WriteLine("Espaço indisponível"); }
+                    }
+                    else { Console.WriteLine("Evento não acontece na Sexta ou no Sábado"); }
                 }
-                else
-                {
-                    Console.WriteLine("Espaço indisponível");
-                }
+                else { Console.WriteLine("Prazo mínimo de 30 dias não foi respeitado."); }
             }
-            else
-            {
-                Console.WriteLine("Não foi possível adicionar a cerimônia. Verifique se o evento acontece na sexta ou sábado e se o prazo mínimo de 30 dias foi respeitado.");
-            }
+            else { Console.WriteLine("Quantidades de convidados inválidas"); }
         }
 
         public void RemoverCerimonias(int codigo)
@@ -112,7 +114,6 @@ namespace POOCasamentosECia
                     }
                 }
             }
-
             return TipoEspaco.NULO;
         }
 

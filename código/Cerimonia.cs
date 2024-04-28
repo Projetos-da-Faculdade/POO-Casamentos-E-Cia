@@ -6,17 +6,17 @@ namespace POOCasamentosECia
     {
         //Atributos
         private static int codigoCerimonia = 9000;
-        private int codigo;
+        private int codigo; 
         private DateTime data;
         private int quantidadeConvidados;
-        private TipoEspaco espaco;
+        private Espaco espaco;
 
         //propriedades
-        public TipoEspaco Espaco { get => espaco; }
+        public Espaco Espaco { get => espaco; }
         public DateTime Data { get => data; }
 
         //Construtor
-        public Cerimonia(int quantidadeConvidados, DateTime data, TipoEspaco espaco)
+        public Cerimonia(int quantidadeConvidados, DateTime data, Espaco espaco)
         {
             this.codigo = Cerimonia.codigoCerimonia++;
             this.quantidadeConvidados = quantidadeConvidados;
@@ -29,8 +29,8 @@ namespace POOCasamentosECia
         {
             return $"Código: {codigo}\n" +
                    $"Quantidade de convidades: {this.quantidadeConvidados}\n" +
-                   $"Data da cerimonia: R$ {this.data}\n" +
-                   $"Espaço ocupado: {this.espaco}";
+                   $"Data da cerimonia: {this.data} - {this.data.DayOfWeek}\n" +
+                   $"Espaço ocupado: {this.espaco.Tipo}";
         }
     }
 }

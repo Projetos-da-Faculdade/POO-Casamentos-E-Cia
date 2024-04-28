@@ -32,24 +32,15 @@ namespace POOCasamentosECia
         {
             if (quantidadeConvidados > 0 && quantidadeConvidados <= 500)
             {
-                if (PrazoMinimo30Dias(data))
+                Espaco espaco = new Espaco(EspacoDisponivel(quantidadeConvidados, data));
+                if (PrazoMinimo30Dias(data) && VerificaSextaOuSabado(data) && VerificaEspacoDisponivel(espaco.Tipo, data))
                 {
-                    if (VerificaSextaOuSabado(data))
-                    {
-                        TipoEspaco espaco = MelhorEspaco(quantidadeConvidados, data);
-                        if (espaco != TipoEspaco.NULO)
-                        {
-                            Cerimonia novaCerimonia = new Cerimonia(quantidadeConvidados, data, espaco);
-                            cerimonias.Add(novaCerimonia);
-                            Console.WriteLine("Cerimônia adicionada com sucesso!");
-                        }
-                        else { Console.WriteLine("Espaço indisponível"); }
-                    }
-                    else { Console.WriteLine("Evento não acontece na Sexta ou no Sábado"); }
+                    cerimonias.Add(new Cerimonia(quantidadeConvidados, data, espaco));
+                    Console.WriteLine($"Adicionado com sucesso no dia: {data.Day+"/"+data.Month+"/"+data.Year} - {data.DayOfWeek}");
                 }
-                else { Console.WriteLine("Prazo mínimo de 30 dias não foi respeitado."); }
+                else { AdicionarCerimonias(quantidadeConvidados, RetornarProximaDataValida(data)); }
             }
-            else { Console.WriteLine("Quantidades de convidados inválidas"); }
+            else { Console.WriteLine("Quantidade de convidados inválidas"); }
         }
 
         public void RemoverCerimonias(int codigo)
@@ -58,75 +49,84 @@ namespace POOCasamentosECia
             throw new NotImplementedException();
         }
 
-        public TipoEspaco MelhorEspaco(int quantidadeConvidados, DateTime data)
+        private bool VerificaEspacoDisponivel(TipoEspaco espaco, DateTime data)
         {
-            if (cerimonias.Count() == 0)
+            foreach (Cerimonia cerimonia in cerimonias)
             {
-                if (quantidadeConvidados > 0 && quantidadeConvidados <= 50) { return TipoEspaco.ESPACO_G; }
-                else if (quantidadeConvidados > 50 && quantidadeConvidados <= 100) { return TipoEspaco.ESPACO_A; }
-                else if (quantidadeConvidados > 100 && quantidadeConvidados <= 200) { return TipoEspaco.ESPACO_E; }
-                else if (quantidadeConvidados > 200 && quantidadeConvidados <= 500) { return TipoEspaco.ESPACO_H; }
-            }
-            else
-            {
-                foreach (Cerimonia cerimonia in cerimonias)
+                if (cerimonia.Data == data && cerimonia.Espaco.Tipo == espaco)
                 {
-                    if (cerimonia.Data == data)
-                    {
-                        if (quantidadeConvidados > 0 && quantidadeConvidados <= 50 && cerimonia.Espaco != TipoEspaco.ESPACO_G)
-                        {
-                            return TipoEspaco.ESPACO_G;
-                        }
-                        else if (quantidadeConvidados > 50 && quantidadeConvidados <= 100)
-                        {
-                            if (cerimonia.Espaco != TipoEspaco.ESPACO_A)
-                            {
-                                return TipoEspaco.ESPACO_A;
-                            }
-                            else if (cerimonia.Espaco != TipoEspaco.ESPACO_B)
-                            {
-                                return TipoEspaco.ESPACO_B;
-                            }
-                            else if (cerimonia.Espaco != TipoEspaco.ESPACO_C)
-                            {
-                                return TipoEspaco.ESPACO_C;
-                            }
-                            else if (cerimonia.Espaco != TipoEspaco.ESPACO_D)
-                            {
-                                return TipoEspaco.ESPACO_D;
-                            }
-                        }
-                        else if (quantidadeConvidados > 100 && quantidadeConvidados <= 200)
-                        {
-                            if (cerimonia.Espaco != TipoEspaco.ESPACO_E)
-                            {
-                                return TipoEspaco.ESPACO_E;
-                            }
-                            else if (cerimonia.Espaco != TipoEspaco.ESPACO_F)
-                            {
-                                return TipoEspaco.ESPACO_F;
-                            }
-                        }
-                        if (quantidadeConvidados > 200 && quantidadeConvidados <= 500 && cerimonia.Espaco != TipoEspaco.ESPACO_H)
-                        {
-                            return TipoEspaco.ESPACO_H;
-                        }
-                    }
+                    return false;
                 }
             }
-            return TipoEspaco.NULO;
+            return true;
         }
 
-        public bool VerificaSextaOuSabado(DateTime data)
+        private TipoEspaco EspacoDisponivel(int quantidadeConvidados, DateTime data)
+        {
+
+            if (quantidadeConvidados > 0 && quantidadeConvidados <= 50 && VerificaEspacoDisponivel(TipoEspaco.ESPACO_G, data))
+            {
+                return TipoEspaco.ESPACO_G;
+            }
+            else if (quantidadeConvidados > 50 && quantidadeConvidados <= 100)
+            {
+                if (VerificaEspacoDisponivel(TipoEspaco.ESPACO_A, data))
+                {
+                    return TipoEspaco.ESPACO_A;
+                }
+                else if (VerificaEspacoDisponivel(TipoEspaco.ESPACO_B, data))
+                {
+                    return TipoEspaco.ESPACO_B;
+                }
+                else if (VerificaEspacoDisponivel(TipoEspaco.ESPACO_C, data))
+                {
+                    return TipoEspaco.ESPACO_C;
+                }
+                else if (VerificaEspacoDisponivel(TipoEspaco.ESPACO_D, data))
+                {
+                    return TipoEspaco.ESPACO_D;
+                }
+            }
+            else if (quantidadeConvidados > 100 && quantidadeConvidados <= 200)
+            {
+                if (VerificaEspacoDisponivel(TipoEspaco.ESPACO_E, data))
+                {
+                    return TipoEspaco.ESPACO_E;
+                }
+                else if (VerificaEspacoDisponivel(TipoEspaco.ESPACO_F, data))
+                {
+                    return TipoEspaco.ESPACO_F;
+                }
+            }
+            else if (quantidadeConvidados > 200 && quantidadeConvidados < 500 && VerificaEspacoDisponivel(TipoEspaco.ESPACO_H, data))
+            {
+                return TipoEspaco.ESPACO_H;
+            }
+
+            return EspacoDisponivel(quantidadeConvidados, RetornarProximaDataValida(data));
+        }
+
+        private DateTime RetornarProximaDataValida(DateTime data)
+        {
+            do
+            {
+                data = data.AddDays(1);
+            } while (data.DayOfWeek != DayOfWeek.Friday && data.DayOfWeek != DayOfWeek.Saturday);
+
+            return data;
+        }
+
+        private bool VerificaSextaOuSabado(DateTime data)
         {
             DayOfWeek dia = data.DayOfWeek;
             return dia == DayOfWeek.Friday || dia == DayOfWeek.Saturday;
         }
 
-        public bool PrazoMinimo30Dias(DateTime data)
+        private bool PrazoMinimo30Dias(DateTime data)
         {
-            double diasNoFuturo = (data - DateTime.Today).TotalDays;
-            return diasNoFuturo >= 30;
+            DateTime hoje = DateTime.Today;
+            int diferencaDias = (data - hoje).Days;
+            return diferencaDias >= 30;
         }
     }
 }

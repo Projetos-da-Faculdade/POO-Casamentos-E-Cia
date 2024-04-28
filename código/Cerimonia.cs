@@ -29,7 +29,7 @@ namespace POOCasamentosECia
         {
             return $"Código: {codigo}\n" +
                    $"Quantidade de convidades: {this.quantidadeConvidados}\n" +
-                   $"Data da cerimonia: {this.data} - {this.data.DayOfWeek}\n" +
+                   $"Data da cerimonia: {this.data.Day+"/"+this.data.Month+"/"+this.data.Year} - {this.data.DayOfWeek}\n" +
                    $"Espaço ocupado: {this.espaco.Tipo}";
         }
     }

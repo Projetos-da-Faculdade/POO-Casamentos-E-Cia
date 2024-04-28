@@ -12,6 +12,5 @@ namespace POOCasamentosECia
         ESPACO_F,
         ESPACO_G,
         ESPACO_H,
-        NULO
     }
 }

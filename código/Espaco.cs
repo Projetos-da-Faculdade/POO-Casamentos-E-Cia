@@ -11,6 +11,7 @@ namespace POOCasamentosECia
         //Propriedade
         public TipoEspaco Tipo { get => tipo; }
 
+
         //Construtor
         public Espaco(TipoEspaco tipo)
         {

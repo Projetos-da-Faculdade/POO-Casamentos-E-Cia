@@ -10,6 +10,8 @@ namespace POOCasamentosECia
         private DateTime data;
         private int quantidadeConvidados;
         private Espaco espaco;
+        private TipoCerimonia tipo;
+        private Buffet buffet;
 
         //propriedades
         public Espaco Espaco { get => espaco; }

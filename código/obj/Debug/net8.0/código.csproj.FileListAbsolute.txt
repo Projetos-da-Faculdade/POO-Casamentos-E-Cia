@@ -13,3 +13,11 @@ C:\Users\User\Documents\VSCODE\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\ref
 C:\Users\User\Documents\VSCODE\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\código.pdb
 C:\Users\User\Documents\VSCODE\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\código.genruntimeconfig.cache
 C:\Users\User\Documents\VSCODE\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\ref\código.dll
+C:\Users\PICHAU\Downloads\trabalho poo\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\código.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PICHAU\Downloads\trabalho poo\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\código.AssemblyInfoInputs.cache
+C:\Users\PICHAU\Downloads\trabalho poo\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\código.AssemblyInfo.cs
+C:\Users\PICHAU\Downloads\trabalho poo\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\código.csproj.CoreCompileInputs.cache
+C:\Users\PICHAU\Downloads\trabalho poo\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\código.sourcelink.json
+C:\Users\PICHAU\Downloads\trabalho poo\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\código.dll
+C:\Users\PICHAU\Downloads\trabalho poo\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\refint\código.dll
+C:\Users\PICHAU\Downloads\trabalho poo\POO-Casamentos-E-Cia\código\obj\Debug\net8.0\código.pdb

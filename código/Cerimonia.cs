@@ -8,8 +8,10 @@ namespace POOCasamentosECia
         private static int codigoCerimonia = 9000;
         private int codigo; 
         private DateTime data;
-        private int quantidadeConvidados;
+        internal int quantidadeConvidados { get; }
         private Espaco espaco;
+        internal TipoCerimonia tipo { get; }
+        private Buffet buffet;
 
         //propriedades
         public Espaco Espaco { get => espaco; }

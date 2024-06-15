@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\VSCODE\\POO-Casamentos-E-Cia\\código\\código.csproj": {}
+    "C:\\Users\\PICHAU\\Downloads\\trabalho poo\\POO-Casamentos-E-Cia\\código\\código.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\VSCODE\\POO-Casamentos-E-Cia\\código\\código.csproj": {
+    "C:\\Users\\PICHAU\\Downloads\\trabalho poo\\POO-Casamentos-E-Cia\\código\\código.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\VSCODE\\POO-Casamentos-E-Cia\\código\\código.csproj",
+        "projectUniqueName": "C:\\Users\\PICHAU\\Downloads\\trabalho poo\\POO-Casamentos-E-Cia\\código\\código.csproj",
         "projectName": "código",
-        "projectPath": "C:\\Users\\User\\Documents\\VSCODE\\POO-Casamentos-E-Cia\\código\\código.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\VSCODE\\POO-Casamentos-E-Cia\\código\\obj\\",
+        "projectPath": "C:\\Users\\PICHAU\\Downloads\\trabalho poo\\POO-Casamentos-E-Cia\\código\\código.csproj",
+        "packagesPath": "C:\\Users\\PICHAU\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PICHAU\\Downloads\\trabalho poo\\POO-Casamentos-E-Cia\\código\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\PICHAU\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -53,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

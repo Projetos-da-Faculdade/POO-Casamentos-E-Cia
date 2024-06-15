@@ -1,11 +1,13 @@
-private string salgado1;
-private string salgado2;
-private string salgado3;
-private string salgado4;
+using POOCasamentosECia;
 
-private double precoSalgados;
-
-public void DefinirPrecoComida()
+class Comida
 {
-    
+    internal double precoSalgados;
+
+    public virtual double DefinirPrecoComida(Cerimonia cerimonia)
+    {
+        precoSalgados = cerimonia.quantidadeConvidados * 40;
+        return precoSalgados;
+    }
 }
+

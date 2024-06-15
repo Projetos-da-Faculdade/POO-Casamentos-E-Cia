@@ -1,5 +1,4 @@
 using System;
-
 namespace POOCasamentosECia
 {
     internal class Espaco
@@ -10,6 +9,7 @@ namespace POOCasamentosECia
 
         //Propriedade
         public TipoEspaco Tipo { get => tipo; }
+
 
         //Construtor
         public Espaco(TipoEspaco tipo)
@@ -35,7 +35,7 @@ namespace POOCasamentosECia
                 
                 while ((linha = ler.ReadLine()) != null)
                 {
-                    vetorEspacoPreco = linha.Split(' ');
+                    vetorEspacoPreco = linha.Split(" ");
                     if(vetorEspacoPreco[0] == tipo.ToString()){
                         valorEspaco = double.Parse(vetorEspacoPreco[1]);
                         break;

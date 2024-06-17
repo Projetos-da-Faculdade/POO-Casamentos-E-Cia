@@ -1,15 +1,15 @@
 using System;
 using System.IO;
 
-class ComidaPremier : IComida
+class ComidaStandard : IComida
 {
     public double precoSalgados { get; } 
-    public ComidaPremier(int quantidadeConvidados){
+    public ComidaStandard(int quantidadeConvidados){
         this.precoSalgados = DefinirPrecoComida(quantidadeConvidados); 
     }
 
     public double DefinirPrecoComida(int quantidadeConvidados)
     {
-        return quantidadeConvidados * 60;
+        return quantidadeConvidados * 40;
     }
 }

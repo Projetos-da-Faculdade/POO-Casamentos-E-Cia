@@ -10,17 +10,12 @@ namespace POOCasamentosECia
         public ItensMesa itensMesa;
 
         //Construtor
-        public Cerimonia() : base( tipoEspaco, tipoCerimonia, quantidadeConvidados, tipoFesta, musica, buffet, data)
+        public Casamento(TipoEspaco tipoEspaco, TipoCerimonia tipoCerimonia, int quantidadeConvidados, TipoFesta tipoFesta, Musica musica, Buffet buffet, DateTime data, Bolo bolo, Decoracao decoracao, ItensMesa itensMesa) : base( tipoEspaco, tipoCerimonia, quantidadeConvidados, tipoFesta, musica, buffet, data)
         {
-           
+           this.bolo = bolo;
+           this.decoracao = decoracao;
+           this.itensMesa = itensMesa;
         }
-
-        //Métodos
-        public override string ToString()
-        {
-            return $"Quantidade de convidades: {this.quantidadeConvidados}\n" +
-                   $"Data da cerimonia: {this.data.Day+"/"+this.data.Month+"/"+this.data.Year} - {this.data.DayOfWeek}\n" +
-                   $"Espaço ocupado: {this.espaco.Tipo}";
-        }
+        
     }
 }

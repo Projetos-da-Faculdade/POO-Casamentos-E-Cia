@@ -4,10 +4,9 @@ class Comida
 {
     internal double precoSalgados;
 
-    public virtual double DefinirPrecoComida(Cerimonia cerimonia)
+    public virtual double DefinirPrecoComida(int quantidadeConvidados)
     {
-        precoSalgados = cerimonia.quantidadeConvidados * 40;
-        return precoSalgados;
+        return quantidadeConvidados * 40;
     }
 }
 

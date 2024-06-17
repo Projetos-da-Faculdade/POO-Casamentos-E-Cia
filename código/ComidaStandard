@@ -1,12 +1,10 @@
 using System;
 using System.IO;
 
-
-internal class ComidaPremier : Comida
+internal class ComidaStandard : Comida
 {
     public override double DefinirPrecoComida(int quantidadeConvidados)
     {
         return quantidadeConvidados * 60;
     }
 }
-

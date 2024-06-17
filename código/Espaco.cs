@@ -4,7 +4,7 @@ namespace POOCasamentosECia
     internal class Espaco
     {
         //Atributos
-        private TipoEspaco tipo;
+        internal TipoEspaco tipo;
         private double valor;
 
         //Propriedade

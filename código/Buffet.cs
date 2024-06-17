@@ -1,17 +1,35 @@
 using System;
 using System.IO;
+using System.Runtime.CompilerServices;
 using FestaEcia;
 
 namespace POOCasamentosECia
 {
-    internal class Buffet
+    class Buffet
     {
-        List<Bebida> bebidas;
-        IComida comida; 
+        public List<Bebida> bebidas { get; }
+        public IComida comida { get; } 
         
         public Buffet(List<Bebida> bebidas, IComida comida){
             this.bebidas = bebidas;
             this.comida = comida;
+        }
+
+        public void MostrarInformacaoBebidas(){
+            foreach(Bebida bebida in bebidas){
+                Console.WriteLine("Nome: ",bebida.nomeBebida,
+                " quantidade: ",bebida.quantidade,
+                " valor unitário: ", bebida.valor,
+                " valor total: ",bebida.valor * bebida.quantidade);
+            }
+        }
+
+        public double ValorTotalBebidas(){
+            double soma = 0;
+            foreach(Bebida bebida in bebidas){
+                soma = bebida.valor * bebida.quantidade;
+            }
+            return soma;
         }
     }
 }

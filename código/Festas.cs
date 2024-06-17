@@ -5,7 +5,7 @@ namespace POOCasamentosECia
 {
     class Festas 
     {
-        public TipoEspaco tipoEspaco { get; }
+        public Espaco espaco { get; }
         public TipoCerimonia tipoCerimonia { get; }
         public int quantidadeConvidados { get; }
         public TipoFesta tipoFesta { get; }
@@ -13,8 +13,8 @@ namespace POOCasamentosECia
         public Buffet buffet { get; }
         public DateTime data { get; }
 
-        public Festas(TipoEspaco tipoEspaco, TipoCerimonia tipoCerimonia, int quantidadeConvidados, TipoFesta tipoFesta, Musica musica, Buffet buffet, DateTime data){
-            this.tipoEspaco = tipoEspaco;
+        public Festas(Espaco tipoEspaco, TipoCerimonia tipoCerimonia, int quantidadeConvidados, TipoFesta tipoFesta, Musica musica, Buffet buffet, DateTime data){
+            this.espaco = espaco;
             this.tipoCerimonia = tipoCerimonia;
             this.quantidadeConvidados = quantidadeConvidados;
             this.tipoFesta = tipoFesta;

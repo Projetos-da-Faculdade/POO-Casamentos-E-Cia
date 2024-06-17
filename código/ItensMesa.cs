@@ -2,10 +2,10 @@ using POOCasamentosECia;
 
 class ItensMesa
 {
-    public double valorBolo { get; }
+    public double valorItensMesa { get; }
 
-    public Bolo(TipoCerimonia tipoItensMesa){
-        valorBolo = DefinirPrecoItensMesa(tipoItensMesa);
+    public ItensMesa(TipoCerimonia tipoItensMesa){
+        valorItensMesa = DefinirPrecoItensMesa(tipoItensMesa);
     }
     
     private double DefinirPrecoItensMesa(TipoCerimonia tipoItensMesa)
@@ -19,7 +19,7 @@ class ItensMesa
 
             while ((linha = ler.ReadLine()) != null)
             {
-                vetorBoloPreco = linha.Split(" ");
+                vetorItensMesaPreco = linha.Split(" ");
                 if (tipoItensMesa == TipoCerimonia.STANDARD && vetorItensMesaPreco[0] == "ITENS_MESA")
                 {
                     valorItensMesa = double.Parse(vetorItensMesaPreco[3]);

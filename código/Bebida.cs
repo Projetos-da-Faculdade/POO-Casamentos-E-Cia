@@ -8,13 +8,15 @@ namespace POOCasamentosECia
     {
         public TipoBebida nomeBebida { get; }
         public double valor { get; } 
+        public int quantidade { get; }
         
         public Bebida (TipoBebida nomeBebida, int quantidade){
             this.nomeBebida = nomeBebida;
-            this.valor = DefinirValorBebida(nomeBebida, quantidade);
+            this.quantidade = quantidade;
+            this.valor = DefinirValorBebida(nomeBebida);
         }
 
-        private double DefinirValorBebida(TipoBebida nomeBebida, int quantidade){
+        private double DefinirValorBebida(TipoBebida nomeBebida){
             double valorBebida=0;
             string []vetorBebidaPreco;
             string linha;
@@ -26,7 +28,7 @@ namespace POOCasamentosECia
                 {
                     vetorBebidaPreco = linha.Split(" ");
                     if(vetorBebidaPreco[0] == nomeBebida.ToString()){
-                        valorBebida = double.Parse(vetorBebidaPreco[3]) * quantidade;
+                        valorBebida = double.Parse(vetorBebidaPreco[3]);
                         break;
                     }
                 }

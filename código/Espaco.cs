@@ -4,12 +4,8 @@ namespace POOCasamentosECia
     internal class Espaco
     {
         //Atributos
-        private TipoEspaco tipo;
-        private double valor;
-
-        //Propriedade
-        public TipoEspaco Tipo { get => tipo; }
-
+        public TipoEspaco tipo { get; }
+        public double valor { get; }
 
         //Construtor
         public Espaco(TipoEspaco tipo)

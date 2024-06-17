@@ -1,8 +1,13 @@
 using POOCasamentosECia;
 
-class ComidaLuxo: Comida
+class ComidaLuxo: IComida
 {
-    public override double DefinirPrecoComida(int quantidadeConvidados)
+    public double precoSalgados { get; } 
+    public ComidaLuxo(int quantidadeConvidados){
+        this.precoSalgados = DefinirPrecoComida(quantidadeConvidados); 
+    }
+    
+    public double DefinirPrecoComida(int quantidadeConvidados)
     {
         return quantidadeConvidados * 48;
     }

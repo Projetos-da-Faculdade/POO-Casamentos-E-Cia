@@ -3,7 +3,7 @@ using System.IO;
 
 namespace POOCasamentosECia
 {
-    internal class Festas 
+    class Festas 
     {
         public TipoEspaco tipoEspaco { get; }
         public TipoCerimonia tipoCerimonia { get; }

@@ -7,9 +7,9 @@ namespace POOCasamentosECia
     internal class Buffet
     {
         List<Bebida> bebidas;
-        Comida comida; 
+        IComida comida; 
         
-        public Buffet(List<Bebida> bebidas, Comida comida){
+        public Buffet(List<Bebida> bebidas, IComida comida){
             this.bebidas = bebidas;
             this.comida = comida;
         }

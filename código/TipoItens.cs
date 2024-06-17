@@ -6,7 +6,7 @@ namespace POOCasamentosECia
     {
         ITENS_MESA,
         DECORACAO,
-        BOLO_CASAMENTO, 
+        BOLO, 
         MUSICA 
     }
 }

@@ -1,7 +1,7 @@
 using System;
 namespace FestaEcia
 {
-    internal enum NomeBebida
+    internal enum TipoBebida
     {
         AGUA_SEM_GAS, 
         SUCO, 

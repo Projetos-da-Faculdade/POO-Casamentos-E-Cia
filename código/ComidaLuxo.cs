@@ -2,9 +2,8 @@ using POOCasamentosECia;
 
 class ComidaLuxo: Comida
 {
-    public override double DefinirPrecoComida(Cerimonia cerimonia)
+    public override double DefinirPrecoComida(int quantidadeConvidados)
     {
-        precoSalgados = cerimonia.quantidadeConvidados * 48;
-        return precoSalgados;
+        return quantidadeConvidados * 48;
     }
 }

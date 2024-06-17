@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace POOCasamentosECia
 {
-    internal class Empresa
+    class Empresa
     {
         //Atributo 
         private List<Cerimonia> cerimonias;

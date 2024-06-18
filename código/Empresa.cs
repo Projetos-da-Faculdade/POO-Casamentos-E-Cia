@@ -7,10 +7,7 @@ namespace POOCasamentosECia
     {
         //Atributo 
         private List<Cerimonia> cerimonias;
-        public Empresa()
-        {
-            this.cerimonias = new List<Cerimonia>();
-        }
+        public Empresa() {}
 
         //Métodos
         public void ListarCerimonias()
@@ -41,12 +38,6 @@ namespace POOCasamentosECia
                 else { AdicionarCerimonias(quantidadeConvidados, RetornarProximaDataValida(data)); }
             }
             else { Console.WriteLine("Quantidade de convidados inválidas"); }
-        }
-
-        public void RemoverCerimonias(int codigo)
-        {
-            //Remover uma cerimonia da lista cerimonias a partir do seu código.
-            throw new NotImplementedException();
         }
 
         private bool VerificaEspacoDisponivel(TipoEspaco espaco, DateTime data)

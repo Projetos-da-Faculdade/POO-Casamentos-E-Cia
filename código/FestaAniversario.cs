@@ -5,8 +5,9 @@ namespace POOCasamentosECia
 {
     internal class FestaAniversario: Festas
     {
-        public Decoracao decoracao;
-        public ItensMesa itensMesa;
+        public Decoracao decoracao { get; }
+        public ItensMesa itensMesa { get; }
+
 
         public FestaAniversario(Espaco espaco, TipoCerimonia tipoCerimonia, int quantidadeConvidados, TipoFesta tipoFesta, Musica musica, Buffet buffet, DateTime data, Decoracao decoracao, ItensMesa itensMesa) : base( espaco, TipoCerimonia.STANDARD, quantidadeConvidados, tipoFesta, musica, buffet, data)
         {

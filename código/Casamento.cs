@@ -5,9 +5,9 @@ namespace POOCasamentosECia
     class Casamento : Festas, IInformacaoFesta
     {
         //Atributos
-        public Bolo bolo;
-        public Decoracao decoracao;
-        public ItensMesa itensMesa;
+        public Bolo bolo { get; }
+        public Decoracao decoracao { get; }
+        public ItensMesa itensMesa{ get; }
 
         //Construtor
         public Casamento(Espaco espaco, TipoCerimonia tipoCerimonia, int quantidadeConvidados, TipoFesta tipoFesta, Musica musica, Buffet buffet, DateTime data, Bolo bolo, Decoracao decoracao, ItensMesa itensMesa) : base( espaco, tipoCerimonia, quantidadeConvidados, tipoFesta, musica, buffet, data)
@@ -26,7 +26,7 @@ namespace POOCasamentosECia
             Console.WriteLine("Bolo: ",bolo.valorBolo);
             Console.WriteLine("Decoração: ",decoracao.valorDecoracao);
             Console.WriteLine("Itens de Mesa: ", itensMesa.valorItensMesa);
-            Console.WriteLine("Saldados ",tipoCerimonia," : ",buffet.comida.DefinirPrecoComida(quantidadeConvidados));
+            Console.WriteLine("Salgados ",tipoCerimonia,": ",buffet.comida.DefinirPrecoComida(quantidadeConvidados));
             Console.WriteLine("Bebidas: ");
             buffet.MostrarInformacaoBebidas();
 

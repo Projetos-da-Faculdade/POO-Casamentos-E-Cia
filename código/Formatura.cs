@@ -6,8 +6,8 @@ namespace POOCasamentosECia
     internal class Formatura : Festas, IInformacaoFesta
     {
         //Atributos
-        public Decoracao decoracao;
-        public ItensMesa itensMesa;
+        public Decoracao decoracao { get; }
+        public ItensMesa itensMesa { get; }
 
         //Construtor
         public Formatura(Espaco espaco, TipoCerimonia tipoCerimonia, int quantidadeConvidados, TipoFesta tipoFesta, Musica musica, Buffet buffet, DateTime data, Decoracao decoracao, ItensMesa itensMesa) : base( espaco, tipoCerimonia, quantidadeConvidados, tipoFesta, musica, buffet, data)

@@ -17,11 +17,22 @@ namespace POOCasamentosECia
 
         public void MostrarInformacaoBebidas(){
             foreach(Bebida bebida in bebidas){
-                Console.WriteLine("Nome: ",bebida.nomeBebida,
-                " quantidade: ",bebida.quantidade,
-                " valor unitário: ", bebida.valor,
-                " valor total: ",bebida.valor * bebida.quantidade);
+                Console.WriteLine("Nome: "+bebida.nomeBebida+
+                " quantidade: "+bebida.quantidade+
+                " valor unitário: "+ bebida.valor+
+                " valor total: "+bebida.valor * bebida.quantidade);
             }
+        }
+
+        public string[] AdicionarFormatotxt(){
+            string [] formatoTxt = new string[bebidas.Count()];
+            for(int i = 0; i < bebidas.Count(); i++){
+                formatoTxt[i] = bebidas[i].nomeBebida+
+                " "+ bebidas[i].quantidade+
+                " "+ bebidas[i].valor+
+                " "+ (bebidas[i].valor * bebidas[i].quantidade) +" ";
+            }
+            return formatoTxt;
         }
 
         public double ValorTotalBebidas(){

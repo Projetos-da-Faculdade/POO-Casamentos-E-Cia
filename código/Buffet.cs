@@ -18,9 +18,9 @@ namespace POOCasamentosECia
         public void MostrarInformacaoBebidas(){
             foreach(Bebida bebida in bebidas){
                 Console.WriteLine("Nome: "+bebida.nomeBebida+
-                " quantidade: "+bebida.quantidade+
-                " valor unitário: "+ bebida.valor+
-                " valor total: "+bebida.valor * bebida.quantidade);
+                " - Quantidade: "+bebida.quantidade+
+                " - Valor unitário: R$ "+ bebida.valor+
+                " - Valor total: R$ "+bebida.valor * bebida.quantidade);
             }
         }
 

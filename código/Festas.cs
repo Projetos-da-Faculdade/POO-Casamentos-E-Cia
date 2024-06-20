@@ -13,7 +13,7 @@ namespace POOCasamentosECia
         public Buffet buffet { get; }
         public DateTime data { get; }
 
-        public Festas(Espaco tipoEspaco, TipoCerimonia tipoCerimonia, int quantidadeConvidados, TipoFesta tipoFesta, Musica musica, Buffet buffet, DateTime data){
+        public Festas(Espaco espaco, TipoCerimonia tipoCerimonia, int quantidadeConvidados, TipoFesta tipoFesta, Musica musica, Buffet buffet, DateTime data){
             this.espaco = espaco;
             this.tipoCerimonia = tipoCerimonia;
             this.quantidadeConvidados = quantidadeConvidados;

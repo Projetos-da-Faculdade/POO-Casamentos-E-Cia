@@ -28,7 +28,7 @@ namespace POOCasamentosECia
                 {
                     vetorBebidaPreco = linha.Split(" ");
                     if(vetorBebidaPreco[0] == nomeBebida.ToString()){
-                        valorBebida = double.Parse(vetorBebidaPreco[3]);
+                        valorBebida = double.Parse(vetorBebidaPreco[2]);
                         break;
                     }
                 }

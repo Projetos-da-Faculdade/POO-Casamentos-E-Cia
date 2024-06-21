@@ -438,7 +438,7 @@ internal class Program
         if (tipoFesta == TipoFesta.LIVRE)
         {
             Console.Clear();
-            Livre livre = new Livre(new Espaco(TipoEspaco.ESPACO_A), TipoFesta.LIVRE, 100, new DateTime(12 / 12 / 2024));
+            Livre livre = new Livre(new Espaco(TipoEspaco.ESPACO_A), TipoFesta.LIVRE, 100, data);
             livre.InformacaoFesta();
             livre.Salvartxt();
             Console.WriteLine("Aperte qualquer tecla para continuar.");
@@ -526,11 +526,11 @@ internal class Program
         #region BuffetBebida
         verificador = true;
         Buffet buffet = null;
+        List<Bebida> bebidas = new List<Bebida>();
+        int quantidadeBebida = 0;
         while (verificador)
         {
             Console.Clear();
-            List<Bebida> bebidas = new List<Bebida>();
-            int quantidadeBebida = 0;
             TextoBebidas(tipoCerimonia);
             Console.WriteLine("Digite uma das opções acima:");
             int opcao = 0;

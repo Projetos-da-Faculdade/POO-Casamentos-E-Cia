@@ -3,3 +3,4 @@ Formatura datafesta TipoFesta quantidadeConvidados TipoEspaco EspacoValor ValorT
 FtEmpresa datafesta TipoFesta quantidadeConvidados TipoEspaco EspacoValor ValorTotalFesta TipoCerimonia MusicaValor SalgadoValor TipoBebida QuantidadeBebida valorUnitarioBebida ValorTotalBebidas
 FtNiversa datafesta TipoFesta quantidadeConvidados TipoEspaco EspacoValor ValorTotalFesta TipoCerimonia MusicaValor SalgadoValor Bolovalor DecoracaoValor ItensMesaValor TipoBebida quantidadeBebida valorUnitariobebida ValorTotalBebidas
 FestLivre datafesta TipoFesta quantidadeConvidados TipoEspaco EspacoValor ValorTotalFesta
+26/07/2024 FORMATURA 100 ESPACO_A 10000 14125 STANDARD 20 4000 50 50 AGUA_SEM_GAS 1 5 5 

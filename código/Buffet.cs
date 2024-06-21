@@ -9,7 +9,7 @@ namespace POOCasamentosECia
     {
         public List<Bebida> bebidas { get; }
         public IComida comida { get; } 
-        
+    
         public Buffet(List<Bebida> bebidas, IComida comida){
             this.bebidas = bebidas;
             this.comida = comida;
@@ -38,7 +38,7 @@ namespace POOCasamentosECia
         public double ValorTotalBebidas(){
             double soma = 0;
             foreach(Bebida bebida in bebidas){
-                soma = bebida.valor * bebida.quantidade;
+                soma += bebida.valor * bebida.quantidade;
             }
             return soma;
         }

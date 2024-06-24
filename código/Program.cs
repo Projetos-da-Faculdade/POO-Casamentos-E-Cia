@@ -408,7 +408,7 @@ internal class Program
                 }
                 else
                 {
-                    throw new VerificaSextaSabadoException("A data deve dar em uma Sesta ou Sabado.");
+                    throw new VerificaSextaSabadoException("A data deve dar em uma Sexta ou Sabado.");
                 }
             }
             catch (VerificaSextaSabadoException vsse)

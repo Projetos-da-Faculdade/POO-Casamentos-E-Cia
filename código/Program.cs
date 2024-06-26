@@ -87,7 +87,7 @@ internal class Program
     public static void TextoMenu()
     {
         Console.WriteLine("~~~~~~~~~~~~~ MENU ~~~~~~~~~~~~~");
-        Console.WriteLine("1 - Vizualizar o calendário.");
+        Console.WriteLine("1 - Visualizar o calendário.");
         Console.WriteLine("2 - Adicionar festa.");
         Console.WriteLine("3 - Sair");
     }
@@ -238,7 +238,7 @@ internal class Program
     #region FunçõesRetornaValor
     public static TipoEspaco DefinirEspaco(int quantidadeConvidados)
     {
-        if (quantidadeConvidados >= 0 && quantidadeConvidados <= 50)
+        if (quantidadeConvidados > 0 && quantidadeConvidados <= 50)
         {
             return TipoEspaco.ESPACO_G;
         }
@@ -342,13 +342,24 @@ internal class Program
                 {
                     throw new ValorNegativoException("Valor negativo inválido.");
                 }
-                if (quantidadeConvidados > 500)
+                else if (quantidadeConvidados == 0)
+                {
+                    throw new ValorNuloException("Valor 0 inválido.");
+                }
+                else if (quantidadeConvidados > 500)
                 {
                     throw new ValorConvidadosSuperiorPermitidoException("Quantidade de convidados superior ao permitido");
                 }
                 else { verificador = false; }
             }
             catch (ValorNegativoException vne)
+            {
+                Console.Clear();
+                Console.WriteLine(vne.Message);
+                Console.WriteLine("Aperte qualquer tecla para continuar.");
+                Console.ReadKey();
+            }
+            catch (ValorNuloException vne)
             {
                 Console.Clear();
                 Console.WriteLine(vne.Message);
@@ -381,7 +392,7 @@ internal class Program
         while (verificador)
         {
             Console.Clear();
-            Console.WriteLine("Digite uma data (formato 1/01/0001): ");
+            Console.WriteLine("Digite uma data (formato 01/01/0001): ");
             try
             {
                 string input = Console.ReadLine();
@@ -438,7 +449,7 @@ internal class Program
         if (tipoFesta == TipoFesta.LIVRE)
         {
             Console.Clear();
-            Livre livre = new Livre(new Espaco(TipoEspaco.ESPACO_A), TipoFesta.LIVRE, 100, data);
+            Livre livre = new Livre(new Espaco(tipoEspaco), tipoFesta, quantidadeConvidados, data);
             livre.InformacaoFesta();
             livre.Salvartxt();
             Console.WriteLine("Aperte qualquer tecla para continuar.");
@@ -537,17 +548,36 @@ internal class Program
             try
             {
                 opcao = int.Parse(Console.ReadLine());
-                if (opcao != 8)
+                if (opcao != 8 && opcao > 0)
                 {
                     Console.WriteLine("Digite a quantidade de bebidas: ");
                     quantidadeBebida = int.Parse(Console.ReadLine());
+                    if (quantidadeBebida == 0)
+                    {
+                        opcao = 0;
+                        throw new ValorNegativoException("Valor 0 inválido.");
+                    }
+                    else if (quantidadeBebida < 0)
+                    {
+                        opcao = 0;
+                        throw new ValorNegativoException("Valor negativo inválido.");
+                    }
+
                 }
-                if (opcao < 0 || quantidadeBebida < 0)
+                else if (opcao < 0 )
                 {
+                    opcao = 0;
                     throw new ValorNegativoException("Valor negativo inválido.");
                 }
             }
             catch (ValorNegativoException vne)
+            {
+                Console.Clear();
+                Console.WriteLine(vne.Message);
+                Console.WriteLine("Aperte qualquer tecla para continuar.");
+                Console.ReadKey();
+            }
+            catch (ValorNuloException vne)
             {
                 Console.Clear();
                 Console.WriteLine(vne.Message);
